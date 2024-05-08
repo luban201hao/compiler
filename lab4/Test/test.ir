@@ -1,0 +1,445 @@
+FUNCTION dist :
+PARAM v0
+PARAM v1
+PARAM v2
+PARAM v3
+t3 := v2 - v0
+t2 := t3
+t5 := v2 - v0
+t4 := t5
+t1 := t2 * t4
+t8 := v3 - v1
+t7 := t8
+t10 := v3 - v1
+t9 := t10
+t6 := t7 * t9
+t0 := t1 + t6
+RETURN t0
+FUNCTION check :
+PARAM v4
+PARAM v5
+PARAM v6
+PARAM v7
+PARAM v8
+PARAM v9
+PARAM v10
+PARAM v11
+ARG v7
+ARG v6
+ARG v5
+ARG v4
+t16 := CALL dist
+IF t16 > #0 GOTO label0
+t15 := #0
+GOTO label1
+LABEL label0 :
+t15 := #1
+LABEL label1 :
+ARG v7
+ARG v6
+ARG v5
+ARG v4
+t18 := CALL dist
+ARG v9
+ARG v8
+ARG v7
+ARG v6
+t19 := CALL dist
+IF t18 == t19 GOTO label2
+t17 := #0
+GOTO label3
+LABEL label2 :
+t17 := #1
+LABEL label3 :
+IF t15 == #0 GOTO label4
+IF t17 == #0 GOTO label4
+t14 := #1
+GOTO label5
+LABEL label4 :
+t14 := #0
+LABEL label5 :
+ARG v9
+ARG v8
+ARG v7
+ARG v6
+t21 := CALL dist
+ARG v11
+ARG v10
+ARG v9
+ARG v8
+t22 := CALL dist
+IF t21 == t22 GOTO label6
+t20 := #0
+GOTO label7
+LABEL label6 :
+t20 := #1
+LABEL label7 :
+IF t14 == #0 GOTO label8
+IF t20 == #0 GOTO label8
+t13 := #1
+GOTO label9
+LABEL label8 :
+t13 := #0
+LABEL label9 :
+ARG v11
+ARG v10
+ARG v9
+ARG v8
+t24 := CALL dist
+ARG v5
+ARG v4
+ARG v11
+ARG v10
+t25 := CALL dist
+IF t24 == t25 GOTO label10
+t23 := #0
+GOTO label11
+LABEL label10 :
+t23 := #1
+LABEL label11 :
+IF t13 == #0 GOTO label12
+IF t23 == #0 GOTO label12
+t12 := #1
+GOTO label13
+LABEL label12 :
+t12 := #0
+LABEL label13 :
+ARG v9
+ARG v8
+ARG v5
+ARG v4
+t27 := CALL dist
+ARG v11
+ARG v10
+ARG v7
+ARG v6
+t28 := CALL dist
+IF t27 == t28 GOTO label14
+t26 := #0
+GOTO label15
+LABEL label14 :
+t26 := #1
+LABEL label15 :
+IF t12 == #0 GOTO label16
+IF t26 == #0 GOTO label16
+t11 := #1
+GOTO label17
+LABEL label16 :
+t11 := #0
+LABEL label17 :
+RETURN t11
+FUNCTION main :
+DEC v12 8
+DEC v13 8
+DEC v14 8
+DEC v15 8
+t29 := &v12
+t30 := #0
+t31 := #1
+t31 := #0 * t31
+t30 := t30 + t31
+t30 := #4 * t30
+t29 := t29 + t30
+READ t32
+*t29 := t32
+t33 := &v12
+t34 := #0
+t35 := #1
+t35 := #1 * t35
+t34 := t34 + t35
+t34 := #4 * t34
+t33 := t33 + t34
+READ t36
+*t33 := t36
+t37 := &v13
+t38 := #0
+t39 := #1
+t39 := #0 * t39
+t38 := t38 + t39
+t38 := #4 * t38
+t37 := t37 + t38
+READ t40
+*t37 := t40
+t41 := &v13
+t42 := #0
+t43 := #1
+t43 := #1 * t43
+t42 := t42 + t43
+t42 := #4 * t42
+t41 := t41 + t42
+READ t44
+*t41 := t44
+t45 := &v14
+t46 := #0
+t47 := #1
+t47 := #0 * t47
+t46 := t46 + t47
+t46 := #4 * t46
+t45 := t45 + t46
+READ t48
+*t45 := t48
+t49 := &v14
+t50 := #0
+t51 := #1
+t51 := #1 * t51
+t50 := t50 + t51
+t50 := #4 * t50
+t49 := t49 + t50
+READ t52
+*t49 := t52
+t53 := &v15
+t54 := #0
+t55 := #1
+t55 := #0 * t55
+t54 := t54 + t55
+t54 := #4 * t54
+t53 := t53 + t54
+READ t56
+*t53 := t56
+t57 := &v15
+t58 := #0
+t59 := #1
+t59 := #1 * t59
+t58 := t58 + t59
+t58 := #4 * t58
+t57 := t57 + t58
+READ t60
+*t57 := t60
+t61 := &v15
+t62 := #0
+t63 := #1
+t63 := #1 * t63
+t62 := t62 + t63
+t62 := #4 * t62
+t61 := t61 + t62
+t64 := *t61
+t65 := &v15
+t66 := #0
+t67 := #1
+t67 := #0 * t67
+t66 := t66 + t67
+t66 := #4 * t66
+t65 := t65 + t66
+t68 := *t65
+t69 := &v14
+t70 := #0
+t71 := #1
+t71 := #1 * t71
+t70 := t70 + t71
+t70 := #4 * t70
+t69 := t69 + t70
+t72 := *t69
+t73 := &v14
+t74 := #0
+t75 := #1
+t75 := #0 * t75
+t74 := t74 + t75
+t74 := #4 * t74
+t73 := t73 + t74
+t76 := *t73
+t77 := &v13
+t78 := #0
+t79 := #1
+t79 := #1 * t79
+t78 := t78 + t79
+t78 := #4 * t78
+t77 := t77 + t78
+t80 := *t77
+t81 := &v13
+t82 := #0
+t83 := #1
+t83 := #0 * t83
+t82 := t82 + t83
+t82 := #4 * t82
+t81 := t81 + t82
+t84 := *t81
+t85 := &v12
+t86 := #0
+t87 := #1
+t87 := #1 * t87
+t86 := t86 + t87
+t86 := #4 * t86
+t85 := t85 + t86
+t88 := *t85
+t89 := &v12
+t90 := #0
+t91 := #1
+t91 := #0 * t91
+t90 := t90 + t91
+t90 := #4 * t90
+t89 := t89 + t90
+t92 := *t89
+ARG t64
+ARG t68
+ARG t72
+ARG t76
+ARG t80
+ARG t84
+ARG t88
+ARG t92
+t93 := CALL check
+v16 := t93
+t94 := &v15
+t95 := #0
+t96 := #1
+t96 := #1 * t96
+t95 := t95 + t96
+t95 := #4 * t95
+t94 := t94 + t95
+t97 := *t94
+t98 := &v15
+t99 := #0
+t100 := #1
+t100 := #0 * t100
+t99 := t99 + t100
+t99 := #4 * t99
+t98 := t98 + t99
+t101 := *t98
+t102 := &v13
+t103 := #0
+t104 := #1
+t104 := #1 * t104
+t103 := t103 + t104
+t103 := #4 * t103
+t102 := t102 + t103
+t105 := *t102
+t106 := &v13
+t107 := #0
+t108 := #1
+t108 := #0 * t108
+t107 := t107 + t108
+t107 := #4 * t107
+t106 := t106 + t107
+t109 := *t106
+t110 := &v14
+t111 := #0
+t112 := #1
+t112 := #1 * t112
+t111 := t111 + t112
+t111 := #4 * t111
+t110 := t110 + t111
+t113 := *t110
+t114 := &v14
+t115 := #0
+t116 := #1
+t116 := #0 * t116
+t115 := t115 + t116
+t115 := #4 * t115
+t114 := t114 + t115
+t117 := *t114
+t118 := &v12
+t119 := #0
+t120 := #1
+t120 := #1 * t120
+t119 := t119 + t120
+t119 := #4 * t119
+t118 := t118 + t119
+t121 := *t118
+t122 := &v12
+t123 := #0
+t124 := #1
+t124 := #0 * t124
+t123 := t123 + t124
+t123 := #4 * t123
+t122 := t122 + t123
+t125 := *t122
+ARG t97
+ARG t101
+ARG t105
+ARG t109
+ARG t113
+ARG t117
+ARG t121
+ARG t125
+t126 := CALL check
+v17 := t126
+t127 := &v14
+t128 := #0
+t129 := #1
+t129 := #1 * t129
+t128 := t128 + t129
+t128 := #4 * t128
+t127 := t127 + t128
+t130 := *t127
+t131 := &v14
+t132 := #0
+t133 := #1
+t133 := #0 * t133
+t132 := t132 + t133
+t132 := #4 * t132
+t131 := t131 + t132
+t134 := *t131
+t135 := &v15
+t136 := #0
+t137 := #1
+t137 := #1 * t137
+t136 := t136 + t137
+t136 := #4 * t136
+t135 := t135 + t136
+t138 := *t135
+t139 := &v15
+t140 := #0
+t141 := #1
+t141 := #0 * t141
+t140 := t140 + t141
+t140 := #4 * t140
+t139 := t139 + t140
+t142 := *t139
+t143 := &v13
+t144 := #0
+t145 := #1
+t145 := #1 * t145
+t144 := t144 + t145
+t144 := #4 * t144
+t143 := t143 + t144
+t146 := *t143
+t147 := &v13
+t148 := #0
+t149 := #1
+t149 := #0 * t149
+t148 := t148 + t149
+t148 := #4 * t148
+t147 := t147 + t148
+t150 := *t147
+t151 := &v12
+t152 := #0
+t153 := #1
+t153 := #1 * t153
+t152 := t152 + t153
+t152 := #4 * t152
+t151 := t151 + t152
+t154 := *t151
+t155 := &v12
+t156 := #0
+t157 := #1
+t157 := #0 * t157
+t156 := t156 + t157
+t156 := #4 * t156
+t155 := t155 + t156
+t158 := *t155
+ARG t130
+ARG t134
+ARG t138
+ARG t142
+ARG t146
+ARG t150
+ARG t154
+ARG t158
+t159 := CALL check
+v18 := t159
+IF v16 != #0 GOTO label18
+IF v17 != #0 GOTO label18
+t161 := #0
+GOTO label19
+LABEL label18 :
+t161 := #1
+LABEL label19 :
+IF t161 != #0 GOTO label20
+IF v18 != #0 GOTO label20
+t160 := #0
+GOTO label21
+LABEL label20 :
+t160 := #1
+LABEL label21 :
+WRITE t160
+RETURN #0

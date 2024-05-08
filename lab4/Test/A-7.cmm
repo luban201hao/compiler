@@ -1,0 +1,17 @@
+struct A{
+    int x;
+    int y;
+};
+
+int main()
+{
+    struct A a, b;
+    int c;
+    a.x = 1;
+    a.y = 2;
+    b.x = 3;
+    b.y = 4;
+    c = a.x + a.y + b.x + b.y;
+    write(c);
+    return 0; 
+}

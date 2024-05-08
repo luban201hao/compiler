@@ -1,0 +1,13 @@
+struct a{
+    int x;
+    int y;
+};
+int main()
+{
+    float x[100][2];
+    int x= +100;
+    y=+100;
+    int z[100,0];
+    int u=[100,0];
+    int h;
+}
